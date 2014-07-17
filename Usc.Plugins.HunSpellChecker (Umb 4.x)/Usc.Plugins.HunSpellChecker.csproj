@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6A614888-8BC5-472A-9182-FABF945F664F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Usc.Plugins.HunSpellChecker</RootNamespace>
+    <AssemblyName>Usc.Plugins.HunSpellChecker</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="interfaces, Version=1.0.4869.17899, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\UmbracoCms.Core.4.11.8\lib\interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\UmbracoCms.Core.4.11.8\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHunspell">
+      <HintPath>..\packages\NHunspell.1.1.1\lib\net\NHunspell.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="umbraco">
+      <HintPath>..\packages\UmbracoCms.Core.4.11.8\lib\umbraco.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Core">
+      <HintPath>..\packages\UmbracoCms.Core.4.11.8\lib\Umbraco.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HunSpellChecker.cs" />
+    <Compile Include="HunSpellCheckerAppEventHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HunSpellChecker\dict\1-Readme.txt" />
+    <None Include="HunSpellChecker\dict\README_da_DK.txt" />
+    <None Include="HunSpellChecker\dict\README_ed_DE.txt" />
+    <None Include="HunSpellChecker\dict\README_en_AU.txt" />
+    <None Include="HunSpellChecker\dict\README_en_US.txt" />
+    <None Include="HunSpellChecker\dict\README_es_ES.txt" />
+    <None Include="HunSpellChecker\dict\README_fr_FR.txt" />
+    <None Include="HunSpellChecker\dict\README_it_IT.txt" />
+    <None Include="HunSpellChecker\dict\README_nl_NL.txt" />
+    <None Include="HunSpellChecker\dict\README_pl_PL.txt" />
+    <None Include="HunSpellChecker\dict\README_pt_BR.TXT" />
+    <None Include="HunSpellChecker\dict\README_sv_SE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="doc\HunSpellChecker Documentation.docx" />
+    <None Include="doc\HunSpellChecker Documentation.pdf" />
+    <None Include="HunSpellChecker\dict\da_DK.aff" />
+    <None Include="HunSpellChecker\dict\da_DK.dic" />
+    <None Include="HunSpellChecker\dict\de_DE.aff" />
+    <None Include="HunSpellChecker\dict\de_DE.dic" />
+    <None Include="HunSpellChecker\dict\en_AU.aff" />
+    <None Include="HunSpellChecker\dict\en_AU.dic" />
+    <None Include="HunSpellChecker\dict\en_US.aff" />
+    <None Include="HunSpellChecker\dict\en_US.dic" />
+    <None Include="HunSpellChecker\dict\es_ES.aff" />
+    <None Include="HunSpellChecker\dict\es_ES.dic" />
+    <None Include="HunSpellChecker\dict\fr_FR.aff" />
+    <None Include="HunSpellChecker\dict\fr_FR.dic" />
+    <None Include="HunSpellChecker\dict\it_IT.aff" />
+    <None Include="HunSpellChecker\dict\it_IT.dic" />
+    <None Include="HunSpellChecker\dict\nl_NL.aff" />
+    <None Include="HunSpellChecker\dict\nl_NL.dic" />
+    <None Include="HunSpellChecker\dict\pl_PL.aff" />
+    <None Include="HunSpellChecker\dict\pl_PL.dic" />
+    <None Include="HunSpellChecker\dict\pt_BR.aff" />
+    <None Include="HunSpellChecker\dict\pt_BR.dic" />
+    <None Include="HunSpellChecker\dict\sv_SE.aff" />
+    <None Include="HunSpellChecker\dict\sv_SE.dic" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /s /y "$(SolutionDir)packages\NHunspell.1.1.1\native\*.*" "$(TargetDir)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
